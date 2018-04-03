@@ -5,7 +5,7 @@ const config = require('./config');
 
 
 module.exports = {
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
 
     entry: {
         'verdor': ['react', 'react-dom', 'react-router-dom'],
