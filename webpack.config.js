@@ -8,6 +8,7 @@ module.exports = {
     devtool: 'eval-source-map',
 
     entry: {
+        'verdor': ['react', 'react-dom', 'react-router-dom'],
         'index': [
             'babel-polyfill',
             'react-hot-loader/patch',

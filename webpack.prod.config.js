@@ -12,6 +12,7 @@ module.exports = {
     devtool: 'eval-source-map',
 
     entry: {
+        'verdor': ['react', 'react-dom', 'react-router-dom'],
         'index': [
             'babel-polyfill',
             'react-hot-loader/patch',
@@ -57,7 +58,7 @@ module.exports = {
                         {
                             loader: 'sass-loader'
                         }
-                        
+
                     ]
                 })
             },
@@ -93,6 +94,10 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin('[name].[hash:8].css'),
         new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'verdor',
+            minChunks: 2
+        }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: false
