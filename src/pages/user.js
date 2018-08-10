@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+console.log('User')
+
 
 export default class User extends React.Component {
     componentWillMount() {

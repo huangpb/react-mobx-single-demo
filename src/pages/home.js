@@ -5,6 +5,8 @@ import Pagination from '@/components/pagination/pagination';
 import loading from '@/components/loading/loading';
 import store from '@/store';
 import { Link } from 'react-router-dom';
+console.log('Home')
+
 
 @observer
 export default class Home extends React.Component {

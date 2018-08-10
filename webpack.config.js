@@ -1,7 +1,15 @@
 const webpack = require('webpack');
 const path = require('path');
+const fs = require('fs')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = require('./config');
+
+
+// 读取要自动插入root节点的 html 和 css
+var loading = {
+    html: fs.readFileSync(path.join(__dirname, './src/components/loadingTest/index.html')),
+    css: '<style>' + fs.readFileSync(path.join(__dirname, './src/components/loadingTest/index.css')) + '</style>'
+}
 
 
 module.exports = {
@@ -91,7 +99,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             favicon: path.resolve(config.srcPath, 'favicon.ico'),
             inject: 'body',
-            template: path.join(config.srcPath, 'index.tmpl.html')
+            template: path.join(config.srcPath, 'index.tmpl.html'),
+            loading
         }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
