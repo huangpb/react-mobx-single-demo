@@ -44,7 +44,7 @@ module.exports = {
         hot: true,
         proxy: {
             '/api/v1': {
-                target: 'http://deadpool-dev.yeeuu.com',
+                target: 'http://deadpool-dev.xxx.com',
                 secure: false,
                 changeOrigin: true
             }
@@ -59,6 +59,12 @@ module.exports = {
                     loader: 'babel-loader'
                 },
                 exclude: /node_modules/
+            },
+            {
+                test: /\.tsx?$/,
+                use: {
+                    loader: 'ts-loader'
+                }
             },
             {
                 test: /\.(css|scss)$/,

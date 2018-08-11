@@ -5,6 +5,7 @@ import Pagination from '@/components/pagination/pagination';
 import loading from '@/components/loading/loading';
 import store from '@/store';
 import { Link } from 'react-router-dom';
+import '../ts/greeter.ts'
 console.log('Home')
 
 
