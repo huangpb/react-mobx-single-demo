@@ -2,6 +2,11 @@
 //  "presets": ["es2015", "es2016", "es2017", "react", "stage-1"],
   "presets": ["env", "react", "stage-1"],
   "plugins": [
+      ["import", {
+          "libraryName": "antd",
+          "libraryDirectory": "es",
+          "style": "css" // `style: true` 会加载 less 文件
+      }],
     "transform-decorators-legacy",
     "react-hot-loader/babel"
   ]

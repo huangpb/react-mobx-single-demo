@@ -6,7 +6,8 @@ import loading from '@/components/loading/loading';
 import store from '@/store';
 import { Link } from 'react-router-dom';
 import '../ts/greeter.ts'
-console.log('Home')
+import {Button} from 'antd';
+
 
 
 @observer
@@ -49,6 +50,7 @@ export default class Home extends React.Component {
                     <Link to="/user">跳到 User 页</Link>
                     <Link to="/others">跳到 Others 页</Link>
                 </div>
+                <Button type="primary">Antd的按钮</Button>
             </div>
         )
     }
